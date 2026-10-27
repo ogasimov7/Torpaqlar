@@ -1,0 +1,13 @@
+{
+  "name": "torpaq-makler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Torpaq satan makler üçün 3D xəritəli sayt",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node scripts/seed.js"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.2"
+  }
+}

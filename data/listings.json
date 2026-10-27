@@ -1,0 +1,1859 @@
+[
+  {
+    "title": "torpaq",
+    "region": "Qəbələ",
+    "settlement": "Bineqedi",
+    "category": "Bağ evi",
+    "area": 209.5,
+    "price": 990000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Asfalt yol"
+    ],
+    "distances": {
+      "sea": 0,
+      "city": 0
+    },
+    "featured": false,
+    "description": "",
+    "polygon": [
+      [
+        49.955484,
+        40.4150895
+      ],
+      [
+        49.9563408,
+        40.414047
+      ],
+      [
+        49.9579472,
+        40.4148973
+      ],
+      [
+        49.9572893,
+        40.4157884
+      ],
+      [
+        49.955484,
+        40.4150895
+      ]
+    ],
+    "photos": [],
+    "id": "1039",
+    "createdAt": "2026-10-26T18:39:42.019Z"
+  },
+  {
+    "title": "6 sot Bineqedi",
+    "region": "Abşeron",
+    "settlement": "Bineqedi",
+    "category": "Bağ evi",
+    "area": 6,
+    "price": 100000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Asfalt yol",
+      "Meşəyə yaxın",
+      "Çaya yaxın"
+    ],
+    "distances": {
+      "sea": 2222,
+      "city": 21212
+    },
+    "featured": true,
+    "description": "",
+    "polygon": [
+      [
+        49.839915,
+        40.422967
+      ],
+      [
+        49.840761,
+        40.422962
+      ],
+      [
+        49.840772,
+        40.422069
+      ],
+      [
+        49.839841,
+        40.422078
+      ],
+      [
+        49.839915,
+        40.422967
+      ]
+    ],
+    "photos": [],
+    "project": "Bineqedi Bağları",
+    "id": "1038",
+    "createdAt": "2026-10-25T18:08:44.610Z"
+  },
+  {
+    "id": "1001",
+    "title": "Dağ mənzərəli torpaq, Vəndam",
+    "region": "Qəbələ",
+    "settlement": "Vəndam",
+    "category": "Fərdi yaşayış",
+    "area": 25,
+    "price": 62500,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Dağ mənzərəsi"
+    ],
+    "distances": {
+      "city": 12
+    },
+    "featured": true,
+    "description": "Vəndam kəndinin yuxarı hissəsində, Qafqaz dağlarına açılan geniş mənzərəsi olan sakit sahə. Villa və ya kiçik qonaq evi üçün idealdır.\n\nSahə 25 sot (0,25 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, ətrafı dağ mənzərəlidir.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        47.9327383,
+        40.9462336
+      ],
+      [
+        47.9334258,
+        40.9464234
+      ],
+      [
+        47.9332658,
+        40.9467681
+      ],
+      [
+        47.9325839,
+        40.9465792
+      ],
+      [
+        47.9327383,
+        40.9462336
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-24T20:03:03.151Z",
+    "updatedAt": "2026-10-25T18:29:42.834Z"
+  },
+  {
+    "id": "1002",
+    "title": "Otel layihəsi üçün 1.2 ha, Nohurqışlaq",
+    "region": "Qəbələ",
+    "settlement": "Nohurqışlaq",
+    "category": "İnvestisiya",
+    "area": 120,
+    "price": 210000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Asfalt yol",
+      "Dağ mənzərəsi",
+      "Meşəyə yaxın"
+    ],
+    "distances": {
+      "city": 8
+    },
+    "featured": true,
+    "description": "Nohur gölünə yaxın turizm zonasında böyük sahə. Butik otel, istirahət kompleksi və ya kotec şəhərciyi üçün uyğundur.\n\nSahə 120 sot (1,2 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, asfalt yolla birbaşa giriş var, ətrafı dağ mənzərəlidir, meşə zolağına bir neçə dəqiqəlik məsafədədir.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        47.8051241,
+        41.0332365
+      ],
+      [
+        47.8065823,
+        41.0329294
+      ],
+      [
+        47.806879,
+        41.0337672
+      ],
+      [
+        47.8054295,
+        41.0340615
+      ],
+      [
+        47.8051241,
+        41.0332365
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-23T03:15:03.151Z"
+  },
+  {
+    "id": "1003",
+    "title": "Meşə kənarında sahə, Qəçrəş",
+    "region": "Quba",
+    "settlement": "Qəçrəş",
+    "category": "Bağ evi",
+    "area": 18,
+    "price": 39600,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Meşəyə yaxın",
+      "Dağ mənzərəsi"
+    ],
+    "distances": {
+      "city": 11
+    },
+    "featured": false,
+    "description": "Qəçrəş meşəsinin kənarında, təmiz havası və sərin yayı ilə seçilən ərazidə bağ evi üçün sahə.\n\nSahə 18 sot (0,18 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, meşə zolağına bir neçə dəqiqəlik məsafədədir, ətrafı dağ mənzərəlidir.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        48.3798573,
+        41.3697374
+      ],
+      [
+        48.3803745,
+        41.3700106
+      ],
+      [
+        48.3801342,
+        41.3702612
+      ],
+      [
+        48.3796228,
+        41.3699876
+      ],
+      [
+        48.3798573,
+        41.3697374
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-21T10:27:03.151Z"
+  },
+  {
+    "id": "1004",
+    "title": "Kommersiya sahəsi, Quba mərkəzi yol",
+    "region": "Quba",
+    "settlement": "Quba şəhəri",
+    "category": "Kommersiya",
+    "area": 8,
+    "price": 96000,
+    "status": "reserved",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Magistral kənarı"
+    ],
+    "distances": {
+      "city": 1
+    },
+    "featured": false,
+    "description": "Şəhərin əsas giriş yolunun üstündə, mağaza, kafe və ya xidmət obyekti üçün yüksək axınlı yer.\n\nSahə 8 sot (0,08 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, magistral yolun kənarında yerləşir.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        48.514796,
+        41.3598754
+      ],
+      [
+        48.5152507,
+        41.3599349
+      ],
+      [
+        48.5152079,
+        41.3601243
+      ],
+      [
+        48.5147582,
+        41.3600662
+      ],
+      [
+        48.514796,
+        41.3598754
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-19T17:39:03.151Z",
+    "updatedAt": "2026-10-25T18:31:34.495Z"
+  },
+  {
+    "id": "1005",
+    "title": "Şahdağ yolunda geniş sahə",
+    "region": "Qusar",
+    "settlement": "Qusar",
+    "category": "Fərdi yaşayış",
+    "area": 40,
+    "price": 72000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Asfalt yol",
+      "Dağ mənzərəsi",
+      "Çaya yaxın"
+    ],
+    "distances": {
+      "city": 3
+    },
+    "featured": true,
+    "description": "Şahdağ turizm kompleksinə gedən yolun yaxınlığında, Şahdağ zirvəsinə baxan sahə.\n\nSahə 40 sot (0,4 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, asfalt yolla birbaşa giriş var, ətrafı dağ mənzərəlidir, yaxınlıqdan çay axır.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        48.4144502,
+        41.4049336
+      ],
+      [
+        48.4152952,
+        41.4046378
+      ],
+      [
+        48.4155399,
+        41.40506
+      ],
+      [
+        48.4147171,
+        41.4053585
+      ],
+      [
+        48.4144502,
+        41.4049336
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-18T00:51:03.151Z"
+  },
+  {
+    "id": "1006",
+    "title": "Pirqulu meşəsi yanında torpaq",
+    "region": "Şamaxı",
+    "settlement": "Pirqulu",
+    "category": "Bağ evi",
+    "area": 30,
+    "price": 45000,
+    "status": "available",
+    "document": "Bələdiyyə sənədi",
+    "features": [
+      "İşıq",
+      "Meşəyə yaxın",
+      "Dağ mənzərəsi"
+    ],
+    "distances": {
+      "city": 14
+    },
+    "featured": false,
+    "description": "Pirqulu rəsədxanasına yaxın, yüksəklikdə yerləşən, yayda sərin və mənzərəli sahə.\n\nSahə 30 sot (0,3 ha) təşkil edir, sənəd — bələdiyyə sənədi. Kommunikasiya və üstünlüklər: elektrik xətti yaxından keçir, meşə zolağına bir neçə dəqiqəlik məsafədədir, ətrafı dağ mənzərəlidir.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        48.6046207,
+        40.7347664
+      ],
+      [
+        48.6054248,
+        40.7348234
+      ],
+      [
+        48.6053726,
+        40.7352269
+      ],
+      [
+        48.6045885,
+        40.7351739
+      ],
+      [
+        48.6046207,
+        40.7347664
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-16T08:03:03.151Z"
+  },
+  {
+    "id": "1007",
+    "title": "Üzümlük üçün 2 ha, Mədrəsə",
+    "region": "Şamaxı",
+    "settlement": "Mədrəsə",
+    "category": "Kənd təsərrüfatı",
+    "area": 200,
+    "price": 80000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Asfalt yol"
+    ],
+    "distances": {
+      "city": 9
+    },
+    "featured": false,
+    "description": "Məşhur Mədrəsə üzüm bağları zonasında, şərabçılıq və ya bağçılıq üçün münbit torpaq.\n\nSahə 200 sot (2 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, asfalt yolla birbaşa giriş var.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        48.5345019,
+        40.5940735
+      ],
+      [
+        48.5362701,
+        40.5952154
+      ],
+      [
+        48.5355358,
+        40.5959197
+      ],
+      [
+        48.5337233,
+        40.5947672
+      ],
+      [
+        48.5345019,
+        40.5940735
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-14T15:15:03.151Z"
+  },
+  {
+    "id": "1008",
+    "title": "Lahıc yolunda bağ sahəsi",
+    "region": "İsmayıllı",
+    "settlement": "Talıstan",
+    "category": "Bağ evi",
+    "area": 15,
+    "price": 27000,
+    "status": "sold",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Ağaclar var",
+      "Dağ mənzərəsi"
+    ],
+    "distances": {
+      "city": 6
+    },
+    "featured": false,
+    "description": "Lahıca gedən yolun üstündə, qoz və alma ağacları olan bağ sahəsi.\n\nSahə 15 sot (0,15 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, sahədə meyvə ağacları var, ətrafı dağ mənzərəlidir.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        48.2496922,
+        40.8098956
+      ],
+      [
+        48.2502395,
+        40.8098244
+      ],
+      [
+        48.2503017,
+        40.8101045
+      ],
+      [
+        48.2497485,
+        40.8101754
+      ],
+      [
+        48.2496922,
+        40.8098956
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-12T22:27:03.151Z"
+  },
+  {
+    "id": "1009",
+    "title": "Kiş kəndində tarixi məhəllədə torpaq",
+    "region": "Şəki",
+    "settlement": "Kiş",
+    "category": "Fərdi yaşayış",
+    "area": 12,
+    "price": 33600,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Dağ mənzərəsi"
+    ],
+    "distances": {
+      "city": 5
+    },
+    "featured": false,
+    "description": "Qədim Kiş məbədinə yaxın, turist marşrutunun üstündə ev və ya qonaq evi üçün sahə.\n\nSahə 12 sot (0,12 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, ətrafı dağ mənzərəlidir.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        47.1897987,
+        41.2248269
+      ],
+      [
+        47.1902844,
+        41.2249264
+      ],
+      [
+        47.1901961,
+        41.2251745
+      ],
+      [
+        47.1897127,
+        41.2250724
+      ],
+      [
+        47.1897987,
+        41.2248269
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-11T05:39:03.151Z"
+  },
+  {
+    "id": "1010",
+    "title": "Çay plantasiyası üçün 3 ha",
+    "region": "Lənkəran",
+    "settlement": "Haftoni",
+    "category": "Kənd təsərrüfatı",
+    "area": 300,
+    "price": 96000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Çaya yaxın"
+    ],
+    "distances": {
+      "city": 7
+    },
+    "featured": false,
+    "description": "Subtropik iqlim zonasında, çay və sitrus bitkiləri üçün yararlı geniş kənd təsərrüfatı sahəsi.\n\nSahə 300 sot (3 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, yaxınlıqdan çay axır.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        48.7992163,
+        38.7290449
+      ],
+      [
+        48.8014774,
+        38.7298781
+      ],
+      [
+        48.8007992,
+        38.7309883
+      ],
+      [
+        48.7985008,
+        38.7301468
+      ],
+      [
+        48.7992163,
+        38.7290449
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-09T12:51:03.151Z"
+  },
+  {
+    "id": "1011",
+    "title": "Göygöl yolunda yaşayış sahəsi",
+    "region": "Göygöl",
+    "settlement": "Göygöl şəhəri",
+    "category": "Fərdi yaşayış",
+    "area": 20,
+    "price": 30000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol"
+    ],
+    "distances": {
+      "city": 2
+    },
+    "featured": false,
+    "description": "Göygöl Milli Parkına gedən yolun yaxınlığında, rahat əlaqəli yaşayış sahəsi.\n\nSahə 20 sot (0,2 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        46.3296142,
+        40.5899752
+      ],
+      [
+        46.3301797,
+        40.5897313
+      ],
+      [
+        46.3303952,
+        40.5900139
+      ],
+      [
+        46.3298292,
+        40.5902708
+      ],
+      [
+        46.3296142,
+        40.5899752
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-07T20:03:03.151Z"
+  },
+  {
+    "id": "1012",
+    "title": "Xızı dağlarında ferma sahəsi",
+    "region": "Xızı",
+    "settlement": "Xızı",
+    "category": "Kənd təsərrüfatı",
+    "area": 50,
+    "price": 40000,
+    "status": "reserved",
+    "document": "Bələdiyyə sənədi",
+    "features": [
+      "İşıq",
+      "Dağ mənzərəsi"
+    ],
+    "distances": {
+      "city": 4
+    },
+    "featured": false,
+    "description": "Qırmızı qumlu dağların fonunda, heyvandarlıq və ya eko-turizm üçün geniş sahə.\n\nSahə 50 sot (0,5 ha) təşkil edir, sənəd — bələdiyyə sənədi. Kommunikasiya və üstünlüklər: elektrik xətti yaxından keçir, ətrafı dağ mənzərəlidir.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        49.0694984,
+        40.9147319
+      ],
+      [
+        49.0705002,
+        40.9147315
+      ],
+      [
+        49.0705106,
+        40.9152658
+      ],
+      [
+        49.0694858,
+        40.9152642
+      ],
+      [
+        49.0694984,
+        40.9147319
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-06T03:15:03.151Z"
+  },
+  {
+    "id": "1013",
+    "title": "Nabran meşəsində istirahət sahəsi",
+    "region": "Xaçmaz",
+    "settlement": "Nabran",
+    "category": "İnvestisiya",
+    "area": 22,
+    "price": 132000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Asfalt yol",
+      "Meşəyə yaxın"
+    ],
+    "distances": {
+      "sea": 2.5
+    },
+    "featured": true,
+    "description": "Nabranın meşəlik istirahət zonasında, kotec və ya istirahət mərkəzi üçün uyğun sahə.\n\nSahə 22 sot (0,22 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, asfalt yolla birbaşa giriş var, meşə zolağına bir neçə dəqiqəlik məsafədədir.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        48.6349178,
+        41.7896968
+      ],
+      [
+        48.6354088,
+        41.7900653
+      ],
+      [
+        48.6350897,
+        41.7903055
+      ],
+      [
+        48.6345847,
+        41.7899388
+      ],
+      [
+        48.6349178,
+        41.7896968
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-04T10:27:03.151Z"
+  },
+  {
+    "id": "1014",
+    "title": "Mərdəkanda bağ sahəsi",
+    "region": "Abşeron",
+    "settlement": "Mərdəkan",
+    "category": "Bağ evi",
+    "area": 6,
+    "price": 66000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Ağaclar var"
+    ],
+    "distances": {
+      "sea": 2,
+      "city": 30
+    },
+    "featured": false,
+    "description": "Mərdəkanın köhnə bağlar zonasında, əncir və tut ağacları olan, yaşayış üçün hazır sahə.\n\nSahə 6 sot (0,06 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahədə meyvə ağacları var.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.1398554,
+        40.4948821
+      ],
+      [
+        50.1402005,
+        40.4949379
+      ],
+      [
+        50.1401439,
+        40.4951168
+      ],
+      [
+        50.1398046,
+        40.4950599
+      ],
+      [
+        50.1398554,
+        40.4948821
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-02T17:39:03.151Z"
+  },
+  {
+    "id": "1015",
+    "title": "Dənizə yaxın torpaq, Şüvəlan",
+    "region": "Abşeron",
+    "settlement": "Şüvəlan",
+    "category": "Fərdi yaşayış",
+    "area": 10,
+    "price": 120000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Dəniz mənzərəsi"
+    ],
+    "distances": {
+      "sea": 0.6,
+      "city": 35
+    },
+    "featured": true,
+    "description": "Şüvəlan çimərliyinə piyada məsafədə, yay evi və ya daimi yaşayış üçün sahə.\n\nSahə 10 sot (0,1 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahədən dəniz görünür.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.1997501,
+        40.488409
+      ],
+      [
+        50.2002047,
+        40.4883579
+      ],
+      [
+        50.2002493,
+        40.4885914
+      ],
+      [
+        50.199791,
+        40.4886431
+      ],
+      [
+        50.1997501,
+        40.488409
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-10-01T00:51:03.151Z"
+  },
+  {
+    "id": "1016",
+    "title": "Buzovnada yaşayış sahəsi",
+    "region": "Abşeron",
+    "settlement": "Buzovna",
+    "category": "Fərdi yaşayış",
+    "area": 8,
+    "price": 56000,
+    "status": "sold",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol"
+    ],
+    "distances": {
+      "sea": 1.2,
+      "city": 28
+    },
+    "featured": false,
+    "description": "Buzovnanın sakit küçəsində, bütün kommunikasiyaları olan hazır sahə.\n\nSahə 8 sot (0,08 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.1098903,
+        40.5078341
+      ],
+      [
+        50.1102516,
+        40.5079888
+      ],
+      [
+        50.1101043,
+        40.5081689
+      ],
+      [
+        50.1097522,
+        40.5080116
+      ],
+      [
+        50.1098903,
+        40.5078341
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-29T08:03:03.151Z"
+  },
+  {
+    "id": "1017",
+    "title": "Nardaranda dəniz kənarı sahə",
+    "region": "Abşeron",
+    "settlement": "Nardaran",
+    "category": "Fərdi yaşayış",
+    "area": 12,
+    "price": 108000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Asfalt yol",
+      "Dəniz mənzərəsi"
+    ],
+    "distances": {
+      "sea": 1.5,
+      "city": 25
+    },
+    "featured": false,
+    "description": "Sürətlə inkişaf edən şimal sahilində, yeni kurort layihələrinə yaxın sahə.\n\nSahə 12 sot (0,12 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, asfalt yolla birbaşa giriş var, sahədən dəniz görünür.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        49.9947104,
+        40.5519472
+      ],
+      [
+        49.9951721,
+        40.5518144
+      ],
+      [
+        49.995291,
+        40.5520591
+      ],
+      [
+        49.9948144,
+        40.5521867
+      ],
+      [
+        49.9947104,
+        40.5519472
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-27T15:15:03.151Z"
+  },
+  {
+    "id": "1018",
+    "title": "Pirşağıda bağ sahəsi",
+    "region": "Abşeron",
+    "settlement": "Pirşağı",
+    "category": "Bağ evi",
+    "area": 7,
+    "price": 49000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.8,
+      "city": 22
+    },
+    "featured": false,
+    "description": "Hasarlanmış, düz relyefli bağ sahəsi — dərhal tikintiyə başlamaq olar.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        49.8848627,
+        40.5478618
+      ],
+      [
+        49.8852196,
+        40.5479504
+      ],
+      [
+        49.8851458,
+        40.5481369
+      ],
+      [
+        49.8847813,
+        40.5480475
+      ],
+      [
+        49.8848627,
+        40.5478618
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-25T22:27:03.151Z"
+  },
+  {
+    "id": "1019",
+    "title": "Novxanıda yaşayış sahəsi",
+    "region": "Abşeron",
+    "settlement": "Novxanı",
+    "category": "Fərdi yaşayış",
+    "area": 9,
+    "price": 72000,
+    "status": "reserved",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol"
+    ],
+    "distances": {
+      "sea": 1.5,
+      "city": 25
+    },
+    "featured": false,
+    "description": "Novxanının yeni yaşayış massivində, məktəb və marketlərə yaxın sahə.\n\nSahə 9 sot (0,09 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        49.7947412,
+        40.5280011
+      ],
+      [
+        49.7950968,
+        40.527811
+      ],
+      [
+        49.7952549,
+        40.5279946
+      ],
+      [
+        49.7949043,
+        40.5281883
+      ],
+      [
+        49.7947412,
+        40.5280011
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-24T05:39:03.151Z"
+  },
+  {
+    "id": "1020",
+    "title": "Magistral kənarı kommersiya, Masazır",
+    "region": "Abşeron",
+    "settlement": "Masazır",
+    "category": "Kommersiya",
+    "area": 15,
+    "price": 180000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Magistral kənarı"
+    ],
+    "distances": {
+      "city": 15
+    },
+    "featured": true,
+    "description": "Bakı–Sumqayıt istiqamətində yoğun nəqliyyat axını olan yolun kənarında, anbar, ticarət mərkəzi və ya avtosalon üçün.\n\nSahə 15 sot (0,15 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, magistral yolun kənarında yerləşir.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        49.7717489,
+        40.4777956
+      ],
+      [
+        49.7723685,
+        40.4779868
+      ],
+      [
+        49.7722484,
+        40.4782057
+      ],
+      [
+        49.7716207,
+        40.478008
+      ],
+      [
+        49.7717489,
+        40.4777956
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-22T12:51:03.151Z"
+  },
+  {
+    "id": "1021",
+    "title": "Türkanda bağ sahəsi",
+    "region": "Abşeron",
+    "settlement": "Türkan",
+    "category": "Bağ evi",
+    "area": 6,
+    "price": 33000,
+    "status": "available",
+    "document": "Bələdiyyə sənədi",
+    "features": [
+      "Su",
+      "İşıq"
+    ],
+    "distances": {
+      "sea": 1,
+      "city": 30
+    },
+    "featured": false,
+    "description": "Türkanın sahilə yaxın hissəsində, sərfəli qiymətə bağ sahəsi.\n\nSahə 6 sot (0,06 ha) təşkil edir, sənəd — bələdiyyə sənədi. Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.2048377,
+        40.3758928
+      ],
+      [
+        50.2051945,
+        40.3759274
+      ],
+      [
+        50.205156,
+        40.3761076
+      ],
+      [
+        50.2048103,
+        40.3760711
+      ],
+      [
+        50.2048377,
+        40.3758928
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-20T20:03:03.151Z"
+  },
+  {
+    "id": "1022",
+    "title": "Sənaye zonasında 1 ha, Hövsan",
+    "region": "Abşeron",
+    "settlement": "Hövsan",
+    "category": "Kommersiya",
+    "area": 100,
+    "price": 250000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "city": 20
+    },
+    "featured": false,
+    "description": "Logistika, anbar və ya istehsal sahəsi üçün yararlı, hasarlanmış böyük ərazi.\n\nSahə 100 sot (1 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0692199,
+        40.382742
+      ],
+      [
+        50.0705962,
+        40.3825025
+      ],
+      [
+        50.0707724,
+        40.3832709
+      ],
+      [
+        50.0694192,
+        40.3834933
+      ],
+      [
+        50.0692199,
+        40.382742
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-19T03:15:03.151Z"
+  },
+  {
+    "id": "1023",
+    "title": "Qala qəsəbəsində torpaq",
+    "region": "Abşeron",
+    "settlement": "Qala",
+    "category": "Fərdi yaşayış",
+    "area": 10,
+    "price": 45000,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz"
+    ],
+    "distances": {
+      "city": 32
+    },
+    "featured": false,
+    "description": "Tarixi Qala qoruğuna yaxın, sakit qəsəbədə yaşayış üçün sahə.\n\nSahə 10 sot (0,1 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.164774,
+        40.4378856
+      ],
+      [
+        50.1652237,
+        40.437881
+      ],
+      [
+        50.1652229,
+        40.4381174
+      ],
+      [
+        50.1647688,
+        40.438116
+      ],
+      [
+        50.164774,
+        40.4378856
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-17T10:27:03.151Z"
+  },
+  {
+    "id": "1024",
+    "title": "Bilgəh Bağları — sahə №1",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 57400,
+    "status": "sold",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 1,
+    "description": "“Bilgəh Bağları” qapalı massivində 1 nömrəli sahə (künc sahə). Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0605141,
+        40.567954
+      ],
+      [
+        50.0604914,
+        40.5681523
+      ],
+      [
+        50.0601144,
+        40.5681271
+      ],
+      [
+        50.0601371,
+        40.5679288
+      ],
+      [
+        50.0605141,
+        40.567954
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-30T20:03:03.151Z"
+  },
+  {
+    "id": "1025",
+    "title": "Bilgəh Bağları — sahə №2",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 53200,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 2,
+    "description": "“Bilgəh Bağları” qapalı massivində 2 nömrəli sahə. Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0604899,
+        40.5681658
+      ],
+      [
+        50.0604672,
+        40.5683641
+      ],
+      [
+        50.0600902,
+        40.5683388
+      ],
+      [
+        50.0601129,
+        40.5681406
+      ],
+      [
+        50.0604899,
+        40.5681658
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-29T20:03:03.151Z"
+  },
+  {
+    "id": "1026",
+    "title": "Bilgəh Bağları — sahə №3",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 53200,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 3,
+    "description": "“Bilgəh Bağları” qapalı massivində 3 nömrəli sahə. Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0604656,
+        40.5683776
+      ],
+      [
+        50.060443,
+        40.5685759
+      ],
+      [
+        50.060066,
+        40.5685506
+      ],
+      [
+        50.0600887,
+        40.5683524
+      ],
+      [
+        50.0604656,
+        40.5683776
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-28T20:03:03.151Z"
+  },
+  {
+    "id": "1027",
+    "title": "Bilgəh Bağları — sahə №4",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 53200,
+    "status": "reserved",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": true,
+    "project": "Bilgəh Bağları",
+    "lot": 4,
+    "description": "“Bilgəh Bağları” qapalı massivində 4 nömrəli sahə. Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0604414,
+        40.5685894
+      ],
+      [
+        50.0604188,
+        40.5687876
+      ],
+      [
+        50.0600418,
+        40.5687624
+      ],
+      [
+        50.0600644,
+        40.5685641
+      ],
+      [
+        50.0604414,
+        40.5685894
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-27T20:03:03.151Z"
+  },
+  {
+    "id": "1028",
+    "title": "Bilgəh Bağları — sahə №5",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 53200,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 5,
+    "description": "“Bilgəh Bağları” qapalı massivində 5 nömrəli sahə. Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0604172,
+        40.5688012
+      ],
+      [
+        50.0603945,
+        40.5689994
+      ],
+      [
+        50.0600175,
+        40.5689742
+      ],
+      [
+        50.0600402,
+        40.5687759
+      ],
+      [
+        50.0604172,
+        40.5688012
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-26T20:03:03.151Z"
+  },
+  {
+    "id": "1029",
+    "title": "Bilgəh Bağları — sahə №6",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 53200,
+    "status": "sold",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 6,
+    "description": "“Bilgəh Bağları” qapalı massivində 6 nömrəli sahə. Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.060393,
+        40.5690129
+      ],
+      [
+        50.0603703,
+        40.5692112
+      ],
+      [
+        50.0599933,
+        40.569186
+      ],
+      [
+        50.060016,
+        40.5689877
+      ],
+      [
+        50.060393,
+        40.5690129
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-25T20:03:03.151Z"
+  },
+  {
+    "id": "1030",
+    "title": "Bilgəh Bağları — sahə №7",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 57400,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 7,
+    "description": "“Bilgəh Bağları” qapalı massivində 7 nömrəli sahə (künc sahə). Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0603688,
+        40.5692247
+      ],
+      [
+        50.0603461,
+        40.569423
+      ],
+      [
+        50.0599691,
+        40.5693978
+      ],
+      [
+        50.0599918,
+        40.5691995
+      ],
+      [
+        50.0603688,
+        40.5692247
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-24T20:03:03.151Z"
+  },
+  {
+    "id": "1031",
+    "title": "Bilgəh Bağları — sahə №8",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 57400,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 8,
+    "description": "“Bilgəh Bağları” qapalı massivində 8 nömrəli sahə (künc sahə). Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0610324,
+        40.5679887
+      ],
+      [
+        50.0610098,
+        40.568187
+      ],
+      [
+        50.0606328,
+        40.5681618
+      ],
+      [
+        50.0606555,
+        40.5679635
+      ],
+      [
+        50.0610324,
+        40.5679887
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-23T20:03:03.151Z"
+  },
+  {
+    "id": "1032",
+    "title": "Bilgəh Bağları — sahə №9",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 53200,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": true,
+    "project": "Bilgəh Bağları",
+    "lot": 9,
+    "description": "“Bilgəh Bağları” qapalı massivində 9 nömrəli sahə. Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0610082,
+        40.5682005
+      ],
+      [
+        50.0609855,
+        40.5683988
+      ],
+      [
+        50.0606086,
+        40.5683735
+      ],
+      [
+        50.0606312,
+        40.5681753
+      ],
+      [
+        50.0610082,
+        40.5682005
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-22T20:03:03.151Z"
+  },
+  {
+    "id": "1033",
+    "title": "Bilgəh Bağları — sahə №10",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 53200,
+    "status": "reserved",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 10,
+    "description": "“Bilgəh Bağları” qapalı massivində 10 nömrəli sahə. Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.060984,
+        40.5684123
+      ],
+      [
+        50.0609613,
+        40.5686106
+      ],
+      [
+        50.0605843,
+        40.5685853
+      ],
+      [
+        50.060607,
+        40.5683871
+      ],
+      [
+        50.060984,
+        40.5684123
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-21T20:03:03.151Z"
+  },
+  {
+    "id": "1034",
+    "title": "Bilgəh Bağları — sahə №11",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 53200,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 11,
+    "description": "“Bilgəh Bağları” qapalı massivində 11 nömrəli sahə. Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0609598,
+        40.5686241
+      ],
+      [
+        50.0609371,
+        40.5688223
+      ],
+      [
+        50.0605601,
+        40.5687971
+      ],
+      [
+        50.0605828,
+        40.5685988
+      ],
+      [
+        50.0609598,
+        40.5686241
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-20T20:03:03.151Z"
+  },
+  {
+    "id": "1035",
+    "title": "Bilgəh Bağları — sahə №12",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 53200,
+    "status": "sold",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 12,
+    "description": "“Bilgəh Bağları” qapalı massivində 12 nömrəli sahə. Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0609356,
+        40.5688359
+      ],
+      [
+        50.0609129,
+        40.5690341
+      ],
+      [
+        50.0605359,
+        40.5690089
+      ],
+      [
+        50.0605586,
+        40.5688106
+      ],
+      [
+        50.0609356,
+        40.5688359
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-19T20:03:03.151Z"
+  },
+  {
+    "id": "1036",
+    "title": "Bilgəh Bağları — sahə №13",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 53200,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 13,
+    "description": "“Bilgəh Bağları” qapalı massivində 13 nömrəli sahə. Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0609113,
+        40.5690476
+      ],
+      [
+        50.0608887,
+        40.5692459
+      ],
+      [
+        50.0605117,
+        40.5692207
+      ],
+      [
+        50.0605344,
+        40.5690224
+      ],
+      [
+        50.0609113,
+        40.5690476
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-18T20:03:03.151Z"
+  },
+  {
+    "id": "1037",
+    "title": "Bilgəh Bağları — sahə №14",
+    "region": "Abşeron",
+    "settlement": "Bilgəh",
+    "category": "Fərdi yaşayış",
+    "area": 7,
+    "price": 57400,
+    "status": "available",
+    "document": "Kupça (Çıxarış)",
+    "features": [
+      "Su",
+      "İşıq",
+      "Qaz",
+      "Asfalt yol",
+      "Hasarlanıb"
+    ],
+    "distances": {
+      "sea": 1.3,
+      "city": 30
+    },
+    "featured": false,
+    "project": "Bilgəh Bağları",
+    "lot": 14,
+    "description": "“Bilgəh Bağları” qapalı massivində 14 nömrəli sahə (künc sahə). Massivdə daxili asfalt yollar, mühafizə və ortaq kommunikasiya xətləri çəkilib.\n\nSahə 7 sot (0,07 ha) təşkil edir, sənəd — kupça (çıxarış). Kommunikasiya və üstünlüklər: su xətti sahəyə qədər çəkilib, elektrik xətti yaxından keçir, qaz xətti mövcuddur, asfalt yolla birbaşa giriş var, sahənin ətrafı hasarlanıb.\n\nBaxış üçün əvvəlcədən zəng edin — sahəyə birlikdə gedib sərhədləri yerində göstəririk. Sənədlərin yoxlanılması və alqı-satqı prosesində tam hüquqi dəstək veririk.",
+    "polygon": [
+      [
+        50.0608871,
+        40.5692594
+      ],
+      [
+        50.0608644,
+        40.5694577
+      ],
+      [
+        50.0604875,
+        40.5694325
+      ],
+      [
+        50.0605101,
+        40.5692342
+      ],
+      [
+        50.0608871,
+        40.5692594
+      ]
+    ],
+    "photos": [],
+    "createdAt": "2026-09-17T20:03:03.151Z"
+  }
+]
