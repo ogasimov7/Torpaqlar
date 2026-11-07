@@ -15,19 +15,33 @@ Lokalda heç bir paket quraşdırmaq lazım deyil (Node.js 18+ kifayətdir).
 
 | Ünvan | Nə var |
 |---|---|
-| `#/` | Ana səhifə: fonda fırlanan 3D xəritə, axtarış, seçilmiş elanlar, “Bilgəh Bağları” massivinin planı, bölgələr |
+| `#/` | Ana səhifə: fonda fırlanan peyk görüntüsü, axtarış, seçilmiş elanlar, “Bilgəh Bağları” massivinin planı, bölgələr |
 | `#/elanlar` | Bütün elanlar, filtrlər (bölgə, təyinat, qiymət, sahə, status) və sıralama |
-| `#/xerite` | Tam ekran 3D xəritə: peyk görüntüsü + relyef, sahələrin sərhədləri status rəngi ilə, qiymət nişanları, klasterlər, 3D/2D, Peyk/Xəritə, fırlatma |
-| `#/elan/1001` | Elanın səhifəsi: peyk qalereyası, xüsusiyyətlər, təsvir, fırlanan 3D xəritə, WhatsApp/zəng |
+| `#/elan/1001` | Elanın səhifəsi: peyk qalereyası, xüsusiyyətlər, təsvir, sorğu forması, WhatsApp/zəng |
 | `#/elaqe` | Əlaqə və müraciət forması (WhatsApp-a göndərir) |
-| `#/admin` | İdarəetmə paneli: elan əlavə et / redaktə et / sil, xəritədə sərhədi çək, foto yüklə |
+| `#/admin` | CRM panel (sol sidebar): icmal, elanlar, müraciətlər, müştərilər, tapşırıqlar, qeyd dəftəri, 3D xəritə |
 
-## Admin panel
+## CRM panel
+
+| Bölmə | Ünvan | Nə var |
+|---|---|---|
+| İcmal | `#/admin` | Göstəricilər, son müraciətlər, yaxın tapşırıqlar, müraciət mərhələləri, ən çox sorğu alan elanlar, sürətli əlavə düymələri |
+| Elanlar | `#/admin/elanlar` | Elanların siyahısı (sorğu sayı ilə), yeni elan, redaktə |
+| Müraciətlər | `#/admin/muracietler` | Saytdan gələn sorğular + əl ilə əlavə olunanlar; status mərhələləri, zəng/WhatsApp, “Müştəri” düyməsi ilə müştəriyə çevirmə |
+| Müştərilər | `#/admin/musteriler` | Müştəri bazası; müştəri kartında məlumat, maraqlandığı elanlar, qeydlər, tapşırıqlar, müraciətlər |
+| Tapşırıqlar | `#/admin/tapsiriqlar` | Zəng, görüş, baxış — gecikmiş / bu gün / sabah / bu həftə üzrə qruplaşdırılır |
+| Qeyd dəftəri | `#/admin/qeydler` | Sərbəst qeydlər: rəng, sabitləmə, müştəriyə və ya elana bağlama |
+| 3D Xəritə | `#/admin/xerite` | Bütün elanlar status rəngi ilə; sahəni seçib statusu dəyişmək, müraciətlərinə baxmaq |
+
+- Saytda hər elanın səhifəsində **“Sorğu göndər”** forması var; əlaqə forması da müraciəti panelə yazır (`POST /api/inquiry`).
+- CRM məlumatları lokalda `data/leads.json`, `data/clients.json`, `data/tasks.json`, `data/notes.json` fayllarındadır (git-ə düşmür), Vercel-də isə Blob-dadır.
+
+## Elan redaktoru
 
 | Link | Nə açır |
 |---|---|
 | http://localhost:3000/elan-elave | Birbaşa **yeni elan** forması |
-| http://localhost:3000/admin | Bütün elanların siyahısı, redaktə, silmə |
+| http://localhost:3000/admin | CRM panel |
 
 - Açar: `makler2026` (dəyişmək üçün: `ADMIN_KEY=yeni_acar npm start`). Brauzer tabı bağlananda yenidən açar soruşulur.
 - **Sahənin yeri** üç yolla daxil edilir (hamısı bir-biri ilə sinxrondur):

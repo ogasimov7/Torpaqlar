@@ -1,7 +1,6 @@
-import { getListing, getListings } from '../api.js';
+import { getListing, getListings, sendLead } from '../api.js';
 import { SITE, STATUS } from '../config.js';
-import { $, $$, esc, fmtPrice, fmtArea, perSot, statusBadge, satFigure, gallery, cardHTML, waLink, centroid } from '../util.js';
-import { createMap, addPlots, orbit, flyToListing, set3D, setBase } from '../mapkit.js';
+import { $, $$, esc, fmtPrice, fmtArea, perSot, statusBadge, satFigure, gallery, cardHTML, waLink, toast } from '../util.js';
 
 export default async function detail(root, id) {
   const l = await getListing(id);
@@ -15,7 +14,6 @@ export default async function detail(root, id) {
     .sort((a, b) => (b.region === l.region) - (a.region === l.region) || Math.abs(a.price - l.price) - Math.abs(b.price - l.price))
     .slice(0, 3);
   const shots = gallery(l);
-  const [lon, lat] = centroid(l.polygon);
   const shotHTML = (s, big) =>
     s.type === 'photo'
       ? `<div class="sat"><img src="${esc(s.url)}" alt="${esc(l.title)}" /></div>`
@@ -58,19 +56,6 @@ export default async function detail(root, id) {
 
         <h2 class="h-sm">Təsvir</h2>
         <div class="prose">${esc(l.description).split(/\n{2,}/).map((p) => `<p>${p.replace(/\n/g, '<br/>')}</p>`).join('')}</div>
-
-        <h2 class="h-sm">Sahə 3D xəritədə</h2>
-        <div class="detail-map">
-          <div id="dmap" class="map"></div>
-          <div class="map-tools map-tools-sm">
-            <button class="tool active" id="dOrbit">Fırlanır</button>
-            <button class="tool active" id="d3d">3D</button>
-            <button class="tool" id="dBase">Peyk</button>
-            <a class="tool" href="#/xerite/${l.id}">Böyük xəritə ↗</a>
-          </div>
-        </div>
-        <p class="muted coords">Koordinatlar: ${lat.toFixed(5)}, ${lon.toFixed(5)} ·
-          <a href="https://www.google.com/maps?q=${lat},${lon}" target="_blank" rel="noopener">Google Maps-də aç</a></p>
       </div>
 
       <aside class="detail-side">
@@ -83,6 +68,16 @@ export default async function detail(root, id) {
           <a class="btn btn-wa btn-block" href="${waLink(l)}" target="_blank" rel="noopener">WhatsApp ilə yaz</a>
           <p class="muted small">${esc(SITE.hours)}. Baxış üçün əvvəlcədən zəng edin.</p>
         </div>
+        ${l.status === 'sold' ? '' : `
+        <form class="inquiry" id="inq" novalidate>
+          <h3>Bu sahə ilə maraqlanırsınız?</h3>
+          <p class="muted small">Sorğu göndərin — makler sizinlə tezliklə əlaqə saxlayacaq.</p>
+          <label>Adınız<input name="name" required maxlength="100" autocomplete="name" placeholder="Ad, soyad" /></label>
+          <label>Telefon<input name="phone" type="tel" required maxlength="40" autocomplete="tel" placeholder="+994 __ ___ __ __" /></label>
+          <label>Mesaj<textarea name="message" rows="3" maxlength="2000">Salam! “${esc(l.title)}” (kod ${l.id}) sahəsi ilə maraqlanıram. Baxış təyin etmək istəyirəm.</textarea></label>
+          <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="btn btn-dark btn-block" type="submit">Sorğu göndər</button>
+        </form>`}
       </aside>
     </div>
 
@@ -96,28 +91,27 @@ export default async function detail(root, id) {
     $$('.g-thumb', root).forEach((x) => x.classList.toggle('active', x === b));
   }));
 
-  // 3D mini xəritə
-  const [cx, cy] = centroid(l.polygon);
-  const map = createMap($('#dmap'), { center: [cx, cy], zoom: 15, pitch: 60, bearing: 0 });
-  map.scrollZoom.disable();
-  map.on('click', () => map.scrollZoom.enable());
-  const spin = orbit(map, { speed: 5, onStop: () => $('#dOrbit')?.classList.remove('active') });
-  map.on('load', () => {
-    const plots = addPlots(map, list.filter((x) => x.id === l.id || x.project && x.project === l.project), { markers: false, onSelect: (id) => id !== l.id && (location.hash = `#/elan/${id}`) });
-    plots.select(l.id);
-    flyToListing(map, l, { padding: 90, duration: 0, extraZoom: l.area > 80 ? -0.3 : -0.1 });
-    map.once('idle', () => spin.start());
+  // Elana sorğu
+  $('#inq')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const f = e.target;
+    const { name, phone, message, website } = f.elements;
+    if (!name.value.trim() || phone.value.replace(/\D/g, '').length < 7) {
+      (name.value.trim() ? phone : name).focus();
+      return toast('Adınızı və telefon nömrənizi yazın', 'err');
+    }
+    const btn = f.querySelector('button');
+    btn.disabled = true;
+    btn.textContent = 'Göndərilir…';
+    try {
+      await sendLead({ listingId: l.id, name: name.value, phone: phone.value, message: message.value, website: website.value });
+      f.innerHTML = `<div class="inq-ok"><span class="success-ic">✓</span><h3>Sorğunuz göndərildi</h3>
+        <p class="muted">Təşəkkür edirik! Makler qısa zamanda sizinlə əlaqə saxlayacaq.</p>
+        <a class="btn btn-wa btn-block" href="${waLink(l)}" target="_blank" rel="noopener">Təcili isə — WhatsApp-da yazın</a></div>`;
+    } catch (err) {
+      toast(err.message, 'err');
+      btn.disabled = false;
+      btn.textContent = 'Sorğu göndər';
+    }
   });
-  $('#dOrbit').addEventListener('click', (e) => e.currentTarget.classList.toggle('active', spin.toggle()));
-  $('#d3d').addEventListener('click', (e) => {
-    set3D(map, !map._is3d);
-    e.currentTarget.classList.toggle('active', map._is3d);
-    e.currentTarget.textContent = map._is3d ? '3D' : '2D';
-  });
-  $('#dBase').addEventListener('click', (e) => {
-    setBase(map, map._base === 'satellite' ? 'street' : 'satellite');
-    e.currentTarget.textContent = map._base === 'satellite' ? 'Peyk' : 'Xəritə';
-  });
-
-  return () => { spin.stop(); map.remove(); };
 }

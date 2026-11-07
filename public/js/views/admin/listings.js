@@ -1,63 +1,42 @@
-// İdarəetmə paneli: #/admin (siyahı), #/admin/yeni (yeni elan), #/admin/:id (redaktə)
-// Ayrı linklər: /admin və /elan-elave (app.js bunları hash marşrutuna çevirir)
-import { getListings, saveListing, deleteListing, uploadImage, checkKey, adminKey } from '../api.js';
-import { STATUS, CATEGORIES, DOCUMENTS, FEATURES } from '../config.js';
-import { $, $$, esc, fmtPrice, fmtArea, areaSot, centroid, bounds, toast, satFigure } from '../util.js';
-import { createMap, addPlots, setBase } from '../mapkit.js';
+// Elanlar: #/admin/elanlar (siyahı), #/admin/elanlar/yeni (yeni elan), #/admin/elanlar/:id (redaktə)
+import { getListings, saveListing, deleteListing, uploadImage, adminKey, crmList } from '../../api.js';
+import { STATUS, CATEGORIES, DOCUMENTS, FEATURES } from '../../config.js';
+import { $, $$, esc, fmtPrice, fmtArea, areaSot, centroid, bounds, toast, satFigure } from '../../util.js';
+import { createMap, addPlots, setBase } from '../../mapkit.js';
+import { rerender } from './common.js';
 
-const rerender = () => dispatchEvent(new HashChangeEvent('hashchange'));
-
-export default async function admin(root, sub) {
-  if (!adminKey.get()) return login(root);
+export default async function listingsPage(root, sub) {
   if (sub === 'yeni') return editor(root, null);
   if (sub) {
     const list = await getListings(true);
     const item = list.find((l) => l.id === sub);
-    if (!item) { location.hash = '#/admin'; return; }
+    if (!item) { location.hash = '#/admin/elanlar'; return; }
     return editor(root, item);
   }
   return table(root);
 }
 
-function adminBar(active) {
-  return `<div class="admin-bar">
-    <div class="container admin-bar-in">
-      <span class="admin-badge">Admin</span>
-      <a href="#/admin" class="${active === 'list' ? 'on' : ''}">Elanlar</a>
-      <a href="#/admin/yeni" class="${active === 'new' ? 'on' : ''}">+ Yeni elan</a>
-      <span class="grow"></span>
-      <a href="#/" target="_blank">Sayta bax ↗</a>
-      <button type="button" class="link-btn" id="logout">Çıxış</button>
-    </div>
-  </div>`;
-}
-
-function bindBar(root) {
-  $('#logout', root)?.addEventListener('click', () => { adminKey.clear(); location.hash = '#/admin'; rerender(); });
-}
-
 // ---------------- Siyahı ----------------
 async function table(root) {
-  const list = await getListings(true);
+  const [list, leads] = await Promise.all([getListings(true), crmList('leads', true).catch(() => [])]);
   const count = (s) => list.filter((l) => l.status === s).length;
-  root.innerHTML = `${adminBar('list')}
-  <section class="container admin">
+  const leadCount = (id) => leads.filter((x) => x.listingId === id).length;
+  root.innerHTML = `<section class="adm-page">
     <div class="admin-head">
       <div><h1>Elanlar <small class="muted">(${list.length})</small></h1>
         <p class="muted" id="counts">${Object.entries(STATUS).map(([k, v]) => `${v.label}: <strong>${count(k)}</strong>`).join(' · ')}</p></div>
       <div class="admin-actions">
         <input class="admin-search" type="search" placeholder="Axtar…" id="aq" />
-        <a class="btn btn-accent" href="#/admin/yeni">+ Yeni elan</a>
+        <a class="btn btn-accent" href="#/admin/elanlar/yeni">+ Yeni elan</a>
       </div>
     </div>
     <div class="table-wrap">
       <table class="table">
-        <thead><tr><th></th><th>Elan</th><th>Bölgə</th><th>Sahə</th><th>Qiymət</th><th>Status</th><th></th></tr></thead>
+        <thead><tr><th></th><th>Elan</th><th>Bölgə</th><th>Sahə</th><th>Qiymət</th><th>Sorğu</th><th>Status</th><th></th></tr></thead>
         <tbody id="rows"></tbody>
       </table>
     </div>
   </section>`;
-  bindBar(root);
 
   const draw = () => {
     const q = $('#aq').value.toLowerCase();
@@ -65,16 +44,17 @@ async function table(root) {
       .filter((l) => !q || `${l.title} ${l.region} ${l.settlement} ${l.id}`.toLowerCase().includes(q))
       .map((l) => `<tr data-id="${l.id}">
         <td class="t-thumb">${satFigure(l, { w: 120, h: 80, pad: 2 })}</td>
-        <td><a href="#/admin/${l.id}"><strong>${esc(l.title)}</strong></a><div class="muted small">Kod ${l.id} · ${esc(l.category)}</div></td>
+        <td><a href="#/admin/elanlar/${l.id}"><strong>${esc(l.title)}</strong></a><div class="muted small">Kod ${l.id} · ${esc(l.category)}</div></td>
         <td>${esc(l.region)}<div class="muted small">${esc(l.settlement)}</div></td>
         <td>${fmtArea(l.area)}</td>
         <td>${fmtPrice(l.price)}</td>
+        <td>${leadCount(l.id) ? `<a class="count-link" href="#/admin/muracietler/elan-${l.id}" title="Bu elana gələn müraciətlər">${leadCount(l.id)}</a>` : '<span class="muted">—</span>'}</td>
         <td><select class="status-select" data-act="status" style="--c:${STATUS[l.status].color}" title="Statusu dəyiş">
           ${Object.entries(STATUS).map(([k, v]) => `<option value="${k}" data-color="${v.color}" ${k === l.status ? 'selected' : ''}>${v.label}</option>`).join('')}
         </select></td>
         <td class="t-actions">
           <a class="btn btn-sm btn-ghost" href="#/elan/${l.id}" target="_blank">Bax</a>
-          <a class="btn btn-sm btn-dark" href="#/admin/${l.id}">Redaktə</a>
+          <a class="btn btn-sm btn-dark" href="#/admin/elanlar/${l.id}">Redaktə</a>
           <button class="btn btn-sm btn-danger" data-act="del">Sil</button>
         </td></tr>`)
       .join('');
@@ -177,14 +157,13 @@ async function editor(root, item) {
   const regions = [...new Set(list.map((x) => x.region))];
   const projects = [...new Set(list.map((x) => x.project).filter(Boolean))];
 
-  root.innerHTML = `${adminBar(item ? 'edit' : 'new')}
-  <section class="container admin">
+  root.innerHTML = `  <section class="adm-page">
     <div class="admin-head">
       <div><h1>${item ? 'Elanı redaktə et' : 'Yeni elan əlavə et'}</h1>
         ${item ? `<p class="muted">Kod ${l.id} · <a class="link-arrow" href="#/elan/${l.id}" target="_blank">saytda bax ↗</a></p>` : ''}
         <ol class="steps"><li id="st1">Sahənin yeri</li><li id="st2">Detallar</li><li id="st3">Fotolar</li></ol>
       </div>
-      <div class="admin-actions"><a class="btn btn-ghost" href="#/admin">Ləğv et</a><button class="btn btn-accent" id="save">Yadda saxla</button></div>
+      <div class="admin-actions"><a class="btn btn-ghost" href="#/admin/elanlar">Ləğv et</a><button class="btn btn-accent" id="save">Yadda saxla</button></div>
     </div>
 
     <div class="editor">
@@ -256,7 +235,6 @@ async function editor(root, item) {
       </form>
     </div>
   </section>`;
-  bindBar(root);
 
   const form = $('#ef');
   const txt = $('#coords');
@@ -478,7 +456,7 @@ async function editor(root, item) {
     $$('#save, #save2').forEach((b) => (b.disabled = true));
     try {
       const saved = await saveListing(data);
-      if (item) { toast('Dəyişikliklər yadda saxlanıldı'); location.hash = '#/admin'; }
+      if (item) { toast('Dəyişikliklər yadda saxlanıldı'); location.hash = '#/admin/elanlar'; }
       else success(root, saved);
     } catch (err) {
       toast(err.message, 'err');
@@ -495,8 +473,7 @@ async function editor(root, item) {
 
 function success(root, l) {
   window.scrollTo(0, 0);
-  root.innerHTML = `${adminBar('new')}
-  <section class="container admin">
+  root.innerHTML = `  <section class="adm-page">
     <div class="success">
       <div class="success-media">${satFigure(l, { w: 640, h: 420, pad: 2.2 })}</div>
       <div class="success-body">
@@ -505,33 +482,13 @@ function success(root, l) {
         <p class="muted">“${esc(l.title)}” · Kod ${l.id} · ${fmtArea(l.area)} · ${fmtPrice(l.price)}</p>
         <div class="success-actions">
           <a class="btn btn-accent" href="#/elan/${l.id}" target="_blank">Elanı saytda aç ↗</a>
-          <a class="btn btn-dark" href="#/xerite/${l.id}" target="_blank">3D xəritədə bax ↗</a>
-          <a class="btn btn-ghost" href="#/admin/yeni" id="again">+ Daha bir elan</a>
-          <a class="btn btn-ghost" href="#/admin">Bütün elanlar</a>
+          <a class="btn btn-dark" href="#/admin/xerite">Paneldə 3D xəritə</a>
+          <a class="btn btn-ghost" href="#/admin/elanlar/yeni" id="again">+ Daha bir elan</a>
+          <a class="btn btn-ghost" href="#/admin/elanlar">Bütün elanlar</a>
         </div>
       </div>
     </div>
   </section>`;
-  bindBar(root);
   // eyni hash olduğu üçün “daha bir elan” üçün marşrutu məcburi yenilə
   $('#again').addEventListener('click', (e) => { e.preventDefault(); rerender(); });
-}
-
-function login(root) {
-  root.innerHTML = `
-  <section class="container login">
-    <form class="login-card" id="lf">
-      <span class="eyebrow">İdarəetmə paneli</span>
-      <h1>Daxil olun</h1>
-      <p class="muted">Elan əlavə etmək və redaktə etmək üçün admin açarını daxil edin.</p>
-      <label>Admin açarı<input type="password" name="key" required autofocus autocomplete="current-password" /></label>
-      <button class="btn btn-accent btn-block">Daxil ol</button>
-    </form>
-  </section>`;
-  $('#lf').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const key = e.target.key.value;
-    try { await checkKey(key); adminKey.set(key); rerender(); }
-    catch { toast('Açar səhvdir', 'err'); }
-  });
 }

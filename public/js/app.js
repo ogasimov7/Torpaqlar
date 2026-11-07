@@ -2,31 +2,38 @@ import { SITE } from './config.js';
 import { $, $$, esc, waLink } from './util.js';
 import home from './views/home.js';
 import listings from './views/listings.js';
-import mapView from './views/map.js';
 import detail from './views/detail.js';
 import contact from './views/contact.js';
-import admin from './views/admin.js';
+import admin from './views/admin/index.js';
 import { initSelects } from './select.js';
 
 const routes = [
   ['home', /^#?\/?$/, home],
   ['listings', /^#\/elanlar$/, listings],
-  ['map', /^#\/xerite(?:\/(\w+))?$/, mapView],
   ['detail', /^#\/elan\/(\w+)$/, detail],
   ['contact', /^#\/elaqe$/, contact],
-  ['admin', /^#\/admin(?:\/(\w+))?$/, admin],
+  ['admin', /^#\/admin(?:\/([\w-]+))?(?:\/([\w-]+))?$/, admin],
 ];
 
-// Ayrı linklər: /admin → idarəetmə paneli, /elan-elave → yeni elan forması
-const PATHS = { '/admin': '#/admin', '/elan-elave': '#/admin/yeni' };
+// Ayrı linklər: /admin → CRM panel, /admin/musteriler → bölmə, /elan-elave → yeni elan forması
+const PATHS = { '/elan-elave': '#/admin/elanlar/yeni' };
 const path = location.pathname.replace(/\/+$/, '');
-if (PATHS[path]) history.replaceState(null, '', `/${location.hash.startsWith('#/admin') ? location.hash : PATHS[path]}`);
+const target = PATHS[path] || (/^\/admin(\/[\w-]+){0,2}$/.test(path) ? `#${path}` : null);
+if (target) history.replaceState(null, '', `/${location.hash.startsWith('#/admin') ? location.hash : target}`);
+
+// Köhnə 3D xəritə linkləri (#/xerite, #/xerite/1001) → elanlar / elan səhifəsi
+function legacy() {
+  const m = location.hash.match(/^#\/xerite(?:\/(\w+))?$/);
+  if (m) history.replaceState(null, '', m[1] ? `#/elan/${m[1]}` : '#/elanlar');
+}
+legacy();
 
 const app = $('#app');
 let cleanup = null;
 let token = 0;
 
 async function render() {
+  legacy();
   const hash = location.hash || '#/';
   const my = ++token;
   try { cleanup?.(); } catch (e) { console.error(e); }

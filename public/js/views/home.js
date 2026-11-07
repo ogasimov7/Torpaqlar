@@ -25,8 +25,8 @@ export default async function home(root) {
     <div class="hero-mist" aria-hidden="true"><i class="mist-blur"></i><i class="mist-a"></i><i class="mist-b"></i></div>
     <div class="hero-sun" aria-hidden="true"><i class="sun-warm"></i><i class="sun-rays"></i><i class="sun-glow"></i></div>
     <div class="container hero-inner">
-      <a class="hero-chip" href="#/xerite"><i>${icon('arrow', 10)}</i>${active.length} sahə satışda · 3D xəritəyə bax</a>
-      <h1>Torpağı almadan əvvəl<br/><span class="h-pill"><img src="${satImage(pill.polygon, { w: 220, h: 120, pad: 3 }).url}" alt="" /></span> <em>3D xəritədə</em> gəzin</h1>
+      <a class="hero-chip" href="#/elanlar"><i>${icon('arrow', 10)}</i>${active.length} sahə satışda · elanlara bax</a>
+      <h1>Torpağı almadan əvvəl<br/><span class="h-pill"><img src="${satImage(pill.polygon, { w: 220, h: 120, pad: 3 }).url}" alt="" /></span> <em>peykdən</em> görün</h1>
       <p class="hero-lead">Abşeron sahillərindən Qəbələ dağlarına qədər yoxlanılmış sənədli torpaq sahələri — dəqiq sərhəd, qiymət və sənəd bir yerdə.</p>
       <form class="hero-search" id="heroSearch">
         <label><span>Bölgə</span><select name="region"><option value="">Bütün bölgələr</option>${byRegion.map((x) => `<option>${esc(x.r)}</option>`).join('')}</select></label>
@@ -75,10 +75,10 @@ export default async function home(root) {
         <h3>Yoxlanılmış sənəd</h3>
         <p>Kupça və bələdiyyə sənədləri satışdan əvvəl yoxlanılır.</p>
       </div>
-      <a class="bento-card bento-wide" href="#/xerite/${bento.id}">
+      <a class="bento-card bento-wide" href="#/elan/${bento.id}">
         <div class="bento-text">
-          <h3>3D xəritədə sərhədlər</h3>
-          <p>Sahənin konturunu relyef və peyk görüntüsü üzərində görün, ətrafını 360° fırladın.</p>
+          <h3>Peyk görüntüsündə sərhədlər</h3>
+          <p>Sahənin konturunu peyk görüntüsü üzərində görün — yaxından, ətraf ərazi və ümumi mövqe.</p>
         </div>
         <div class="bento-art">
           <span class="dots"></span>
@@ -116,7 +116,7 @@ export default async function home(root) {
     <div class="cta">
       <div>
         <h2>Torpağınızı satmaq istəyirsiniz?</h2>
-        <p>Sahənizi peyk görüntüsü və 3D xəritə ilə təqdim edək — alıcılar sərhədləri dərhal görsün.</p>
+        <p>Sahənizi peyk görüntüsü ilə təqdim edək — alıcılar sərhədləri dərhal görsün.</p>
       </div>
       <div class="cta-actions">
         <a class="btn btn-accent" href="${waLink()}" target="_blank" rel="noopener">WhatsApp ilə yazın</a>
@@ -134,7 +134,7 @@ export default async function home(root) {
   });
   $$('.region', root).forEach((b) => b.addEventListener('click', () => {
     Object.assign(filters, { region: b.dataset.region, category: '', q: '' });
-    location.hash = '#/xerite';
+    location.hash = '#/elanlar';
   }));
 
   return heroMap(list);
@@ -189,7 +189,7 @@ function projectSection(lots) {
           ${Object.entries(STATUS).map(([k, v]) => `<li><i style="background:${v.color}"></i>${v.label}<strong>${counts[k]}</strong></li>`).join('')}
         </ul>
         <div class="project-price">Parsellər <strong>${fmtPrice(minPrice)}</strong>-dan · ${fmtArea(lots[0].area)}</div>
-        <a class="btn btn-accent" href="#/xerite/${(avail[0] || lots[0]).id}">Massivi 3D xəritədə aç ${icon('arrow')}</a>
+        <a class="btn btn-accent" href="#/elan/${(avail[0] || lots[0]).id}">Boş parselə bax ${icon('arrow')}</a>
       </div>
       <div class="project-plan">
         <img src="${s.url}" alt="Bilgəh Bağları peyk görüntüsü" loading="lazy" />

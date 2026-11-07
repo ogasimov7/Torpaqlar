@@ -4,3 +4,8 @@ node_modules/
 .DS_Store
 public/uploads/*
 !public/uploads/.gitkeep
+# CRM məlumatları (lokal) — şəxsi məlumatdır, repoya düşməsin
+data/leads.json
+data/clients.json
+data/tasks.json
+data/notes.json

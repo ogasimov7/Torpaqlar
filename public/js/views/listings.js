@@ -10,7 +10,7 @@ export default async function listings(root) {
   </section>
   <section class="container catalog">
     <div class="catalog-bar">${filtersHTML(list)}</div>
-    <div class="catalog-meta"><span id="count"></span><a class="btn btn-sm btn-dark" href="#/xerite">Xəritədə göstər</a></div>
+    <div class="catalog-meta"><span id="count"></span></div>
     <div class="grid cards" id="grid"></div>
   </section>`;
 

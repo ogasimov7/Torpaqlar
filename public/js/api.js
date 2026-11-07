@@ -41,6 +41,30 @@ export async function deleteListing(id) {
   cache = null;
 }
 
+// ---------- CRM: müraciətlər, müştərilər, tapşırıqlar, qeydlər (yalnız admin) ----------
+const crmCache = {};
+
+export async function crmList(col, force = false) {
+  if (!crmCache[col] || force) crmCache[col] = await request(`/api/${col}`);
+  return crmCache[col];
+}
+
+export async function crmSave(col, item) {
+  const saved = item.id
+    ? await request(`/api/${col}/${item.id}`, { method: 'PUT', body: JSON.stringify(item) })
+    : await request(`/api/${col}`, { method: 'POST', body: JSON.stringify(item) });
+  delete crmCache[col];
+  return saved;
+}
+
+export async function crmDelete(col, id) {
+  await request(`/api/${col}/${id}`, { method: 'DELETE' });
+  delete crmCache[col];
+}
+
+// Saytdan müraciət (hamı göndərə bilər)
+export const sendLead = (data) => request('/api/inquiry', { method: 'POST', body: JSON.stringify(data) });
+
 // Böyük fotolar göndərilməzdən əvvəl kiçildilir (Vercel-də sorğu limiti ~4.5 MB-dır)
 async function shrink(file, max = 2200) {
   if (file.size < 1.2e6 || !/^image\/(jpe?g|png|webp)$/.test(file.type)) return file;
