@@ -1,6 +1,7 @@
 // İdarəetmə paneli (CRM). Marşrutlar:
 //   #/admin                 — icmal (dashboard)
 //   #/admin/elanlar         — elanlar; /elanlar/yeni — yeni elan; /elanlar/:id — redaktə
+//   #/admin/sorgular        — saytdan göndərilən elanlar (satıram / axtarıram)
 //   #/admin/muracietler     — müraciətlər (/muracietler/:id — müraciəti açır, /muracietler/elan-:id — elana görə filtr)
 //   #/admin/musteriler      — müştərilər; /musteriler/:id — müştəri kartı
 //   #/admin/tapsiriqlar     — tapşırıqlar və görüşlər
@@ -13,6 +14,7 @@ import { ic, rerender, updateCounts } from './common.js';
 import dashboard from './dashboard.js';
 import listingsPage from './listings.js';
 import leadsPage from './leads.js';
+import submissionsPage from './submissions.js';
 import clientsPage from './clients.js';
 import tasksPage from './tasks.js';
 import notesPage from './notes.js';
@@ -21,6 +23,7 @@ import mapPage from './map.js';
 const NAV = [
   ['', 'İcmal', 'dash', dashboard],
   ['elanlar', 'Elanlar', 'plots', listingsPage],
+  ['sorgular', 'Saytdan elanlar', 'post', submissionsPage],
   ['muracietler', 'Müraciətlər', 'inbox', leadsPage],
   ['musteriler', 'Müştərilər', 'users', clientsPage],
   ['tapsiriqlar', 'Tapşırıqlar', 'tasks', tasksPage],

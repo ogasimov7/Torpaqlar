@@ -1,5 +1,5 @@
 // Elanlar: #/admin/elanlar (siyahı), #/admin/elanlar/yeni (yeni elan), #/admin/elanlar/:id (redaktə)
-import { getListings, saveListing, deleteListing, uploadImage, adminKey, crmList } from '../../api.js';
+import { getListings, saveListing, deleteListing, uploadImage, adminKey, crmList, crmSave } from '../../api.js';
 import { STATUS, CATEGORIES, DOCUMENTS, FEATURES } from '../../config.js';
 import { $, $$, esc, fmtPrice, fmtArea, areaSot, centroid, bounds, toast, satFigure } from '../../util.js';
 import { createMap, addPlots, setBase } from '../../mapkit.js';
@@ -7,6 +7,13 @@ import { rerender } from './common.js';
 
 export default async function listingsPage(root, sub) {
   if (sub === 'yeni') return editor(root, null);
+  // Saytdan gələn satış elanını redaktə edib dərc etmək
+  if (sub?.startsWith('sorgu-')) {
+    const s = (await crmList('submissions', true)).find((x) => x.id === sub.slice(6));
+    if (!s) { location.hash = '#/admin/sorgular'; return; }
+    if (s.listingId) { location.hash = `#/admin/elanlar/${s.listingId}`; return; }
+    return editor(root, null, s);
+  }
   if (sub) {
     const list = await getListings(true);
     const item = list.find((l) => l.id === sub);
@@ -146,12 +153,25 @@ function square([lng, lat], sot, rot = 0) {
 }
 
 // ---------------- Elan forması ----------------
-async function editor(root, item) {
+async function editor(root, item, fromSub = null) {
   const list = await getListings(true);
   const l = item ? structuredClone(item) : {
     title: '', region: '', settlement: '', category: CATEGORIES[0], area: '', price: '', status: 'available',
     document: DOCUMENTS[0], features: [], distances: {}, featured: false, description: '', polygon: [], photos: [],
   };
+  if (fromSub) {
+    const s = fromSub;
+    Object.assign(l, {
+      title: s.title || `${s.area} sot torpaq, ${s.settlement || s.region}`,
+      region: s.region || '', settlement: s.settlement || '',
+      category: CATEGORIES.includes(s.category) ? s.category : CATEGORIES[0],
+      document: DOCUMENTS.includes(s.document) ? s.document : DOCUMENTS[0],
+      area: s.area || '', price: s.price || '',
+      features: (s.features || []).filter((f) => FEATURES.includes(f)),
+      description: s.description || '', photos: [...(s.photos || [])],
+      submissionId: s.id,
+    });
+  }
   let ring = l.polygon.length ? l.polygon.slice(0, -1) : [];
   let point = null; // tək nöqtə (sahənin mərkəzi)
   const regions = [...new Set(list.map((x) => x.region))];
@@ -163,8 +183,13 @@ async function editor(root, item) {
         ${item ? `<p class="muted">Kod ${l.id} · <a class="link-arrow" href="#/elan/${l.id}" target="_blank">saytda bax ↗</a></p>` : ''}
         <ol class="steps"><li id="st1">Sahənin yeri</li><li id="st2">Detallar</li><li id="st3">Fotolar</li></ol>
       </div>
-      <div class="admin-actions"><a class="btn btn-ghost" href="#/admin/elanlar">Ləğv et</a><button class="btn btn-accent" id="save">Yadda saxla</button></div>
+      <div class="admin-actions"><a class="btn btn-ghost" href="${fromSub ? `#/admin/sorgular/${fromSub.id}` : '#/admin/elanlar'}">Ləğv et</a><button class="btn btn-accent" id="save">${fromSub ? 'Təsdiqlə və dərc et' : 'Yadda saxla'}</button></div>
     </div>
+    ${fromSub ? `<div class="from-sub">
+      <div><strong>Saytdan gələn elan</strong> · ${esc(fromSub.name)} · <a href="tel:${esc(fromSub.phone.replace(/[^\d+]/g, ''))}">${esc(fromSub.phone)}</a> · <a href="#/admin/sorgular/${fromSub.id}">sorğuya bax</a></div>
+      ${fromSub.location ? `<div><span class="muted">Satıcının qeyd etdiyi yer:</span> ${esc(fromSub.location)}</div>` : '<div class="muted">Satıcı yeri qeyd etməyib — sərhədi xəritədə çəkin.</div>'}
+      <div class="muted small">Məlumatları yoxlayın, sahənin sərhədini çəkin və “Təsdiqlə və dərc et” basın. Satıcının əlaqə məlumatları saytda göstərilmir.</div>
+    </div>` : ''}
 
     <div class="editor">
       <div class="editor-map">
@@ -403,6 +428,12 @@ async function editor(root, item) {
   txt.addEventListener('input', () => { clearTimeout(tmr); tmr = setTimeout(() => applyText({ quiet: true }), 500); });
   txt.addEventListener('blur', () => refresh());
   $('#applyBtn').addEventListener('click', () => applyText());
+  // Satıcı koordinat və ya Google Maps linki yazıbsa — xəritəyə köçür
+  if (fromSub?.location) {
+    // ünvan mətnindəki təsadüfi rəqəmlər nöqtə sayılmasın — yalnız Azərbaycan ərazisi
+    const pts = parseCoords(fromSub.location).pts.filter(([x, y]) => x > 44 && x < 51.5 && y > 38 && y < 42.2);
+    if (pts.length) map.once('load', () => { txt.value = pts.map(fmtPt).join('\n'); applyText(); });
+  }
   $('#squareBtn').addEventListener('click', () => {
     const sot = +form.area.value;
     if (!sot) { form.area.focus(); return toast('Əvvəlcə “Sahə (sot)” yazın', 'err'); }
@@ -456,6 +487,10 @@ async function editor(root, item) {
     $$('#save, #save2').forEach((b) => (b.disabled = true));
     try {
       const saved = await saveListing(data);
+      if (fromSub) {
+        await crmSave('submissions', { id: fromSub.id, status: 'published', listingId: saved.id }).catch(() => {});
+        toast('Elan təsdiqləndi və saytda dərc olundu');
+      }
       if (item) { toast('Dəyişikliklər yadda saxlanıldı'); location.hash = '#/admin/elanlar'; }
       else success(root, saved);
     } catch (err) {

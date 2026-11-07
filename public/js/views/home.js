@@ -115,12 +115,13 @@ export default async function home(root) {
   <section class="section container">
     <div class="cta">
       <div>
-        <h2>Torpağınızı satmaq istəyirsiniz?</h2>
-        <p>Sahənizi peyk görüntüsü ilə təqdim edək — alıcılar sərhədləri dərhal görsün.</p>
+        <h2>Torpaq satırsınız və ya axtarırsınız?</h2>
+        <p>Elanınızı göndərin — yoxlayıb peyk görüntüsü ilə dərc edək, ya da sizə uyğun sahəni tapaq.</p>
       </div>
       <div class="cta-actions">
-        <a class="btn btn-accent" href="${waLink()}" target="_blank" rel="noopener">WhatsApp ilə yazın</a>
-        <a class="btn btn-ghost-light" href="tel:${SITE.phone.replace(/\s/g, '')}">${esc(SITE.phone)}</a>
+        <a class="btn btn-accent" href="#/elan-yerlesdir">Elan yerləşdir</a>
+        <a class="btn btn-ghost-light" href="#/elan-yerlesdir/axtariram">Torpaq axtarıram</a>
+        <a class="btn btn-ghost-light" href="${waLink()}" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
   </section>`;

@@ -50,6 +50,7 @@ const ICONS = {
   clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
   arrow: '<path d="m9 6 6 6-6 6"/>',
   search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
+  post: '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12.5h5"/>',
 };
 export const ic = (name, size = 18) =>
   `<svg class="ic" viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name]}</svg>`;
@@ -331,12 +332,13 @@ export const budgetText = (c) => {
 // Sidebar-da yeni müraciətlərin və bu günkü/gecikmiş tapşırıqların sayı
 export async function updateCounts(root = document) {
   try {
-    const [leads, tasks] = await Promise.all([crmList('leads'), crmList('tasks')]);
+    const [leads, tasks, subs] = await Promise.all([crmList('leads'), crmList('tasks'), crmList('submissions')]);
     const set = (k, n, warn) => {
       const el = $(`[data-count="${k}"]`, root);
       if (el) { el.textContent = n || ''; el.classList.toggle('warn', !!warn); }
     };
     set('muracietler', leads.filter((l) => l.status === 'new').length);
+    set('sorgular', subs.filter((s) => s.status === 'new').length);
     const due = tasks.filter((t) => !t.done && (isOverdue(t) || isToday(t.due)));
     set('tapsiriqlar', due.length, due.some(isOverdue));
   } catch { /* sayğac vacib deyil */ }

@@ -4,6 +4,7 @@ import home from './views/home.js';
 import listings from './views/listings.js';
 import detail from './views/detail.js';
 import contact from './views/contact.js';
+import submit from './views/submit.js';
 import admin from './views/admin/index.js';
 import { initSelects } from './select.js';
 
@@ -12,6 +13,7 @@ const routes = [
   ['listings', /^#\/elanlar$/, listings],
   ['detail', /^#\/elan\/(\w+)$/, detail],
   ['contact', /^#\/elaqe$/, contact],
+  ['submit', /^#\/elan-yerlesdir(?:\/(\w+))?$/, submit],
   ['admin', /^#\/admin(?:\/([\w-]+))?(?:\/([\w-]+))?$/, admin],
 ];
 

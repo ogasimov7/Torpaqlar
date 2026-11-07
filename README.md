@@ -18,7 +18,8 @@ Lokalda heç bir paket quraşdırmaq lazım deyil (Node.js 18+ kifayətdir).
 | `#/` | Ana səhifə: fonda fırlanan peyk görüntüsü, axtarış, seçilmiş elanlar, “Bilgəh Bağları” massivinin planı, bölgələr |
 | `#/elanlar` | Bütün elanlar, filtrlər (bölgə, təyinat, qiymət, sahə, status) və sıralama |
 | `#/elan/1001` | Elanın səhifəsi: peyk qalereyası, xüsusiyyətlər, təsvir, sorğu forması, WhatsApp/zəng |
-| `#/elaqe` | Əlaqə və müraciət forması (WhatsApp-a göndərir) |
+| `#/elaqe` | Əlaqə və müraciət forması (panelə düşür) |
+| `#/elan-yerlesdir` | Saytdan elan: “Torpaq satıram” (admin təsdiqindən sonra dərc olunur) və ya “Torpaq axtarıram” (`/axtariram`) |
 | `#/admin` | CRM panel (sol sidebar): icmal, elanlar, müraciətlər, müştərilər, tapşırıqlar, qeyd dəftəri, 3D xəritə |
 
 ## CRM panel
@@ -27,6 +28,7 @@ Lokalda heç bir paket quraşdırmaq lazım deyil (Node.js 18+ kifayətdir).
 |---|---|---|
 | İcmal | `#/admin` | Göstəricilər, son müraciətlər, yaxın tapşırıqlar, müraciət mərhələləri, ən çox sorğu alan elanlar, sürətli əlavə düymələri |
 | Elanlar | `#/admin/elanlar` | Elanların siyahısı (sorğu sayı ilə), yeni elan, redaktə |
+| Saytdan elanlar | `#/admin/sorgular` | “Elan yerləşdir” formasından gələnlər. Satış elanı: yoxla → “Redaktə et və dərc et” (sərhədi çək, təsdiqlə). Axtarış: uyğun elanlar avtomatik seçilir, WhatsApp-da bir kliklə göndərilir; müştərilərə əlavə etmək, tapşırıq |
 | Müraciətlər | `#/admin/muracietler` | Saytdan gələn sorğular + əl ilə əlavə olunanlar; status mərhələləri, zəng/WhatsApp, “Müştəri” düyməsi ilə müştəriyə çevirmə |
 | Müştərilər | `#/admin/musteriler` | Müştəri bazası; müştəri kartında məlumat, maraqlandığı elanlar, qeydlər, tapşırıqlar, müraciətlər |
 | Tapşırıqlar | `#/admin/tapsiriqlar` | Zəng, görüş, baxış — gecikmiş / bu gün / sabah / bu həftə üzrə qruplaşdırılır |
@@ -34,7 +36,8 @@ Lokalda heç bir paket quraşdırmaq lazım deyil (Node.js 18+ kifayətdir).
 | 3D Xəritə | `#/admin/xerite` | Bütün elanlar status rəngi ilə; sahəni seçib statusu dəyişmək, müraciətlərinə baxmaq |
 
 - Saytda hər elanın səhifəsində **“Sorğu göndər”** forması var; əlaqə forması da müraciəti panelə yazır (`POST /api/inquiry`).
-- CRM məlumatları lokalda `data/leads.json`, `data/clients.json`, `data/tasks.json`, `data/notes.json` fayllarındadır (git-ə düşmür), Vercel-də isə Blob-dadır.
+- Saytdan göndərilən elanda satıcının əlaqə məlumatları yalnız paneldə görünür, dərc olunan elana düşmür.
+- CRM məlumatları lokalda `data/leads.json`, `data/clients.json`, `data/tasks.json`, `data/notes.json`, `data/submissions.json` fayllarındadır (git-ə düşmür), Vercel-də isə Blob-dadır.
 
 ## Elan redaktoru
 

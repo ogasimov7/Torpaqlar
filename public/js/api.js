@@ -62,6 +62,10 @@ export async function crmDelete(col, id) {
   delete crmCache[col];
 }
 
+// Saytdan elan: torpaq satıram / axtarıram (hamı göndərə bilər, admin təsdiqləyir)
+export const submitListing = (data) => request('/api/submit', { method: 'POST', body: JSON.stringify(data) });
+export const uploadSubmissionImage = (file) => uploadImage(file, { url: '/api/submit-upload', max: 1600 });
+
 // Saytdan müraciət (hamı göndərə bilər)
 export const sendLead = (data) => request('/api/inquiry', { method: 'POST', body: JSON.stringify(data) });
 
@@ -80,13 +84,13 @@ async function shrink(file, max = 2200) {
   } catch { return file; }
 }
 
-export async function uploadImage(file) {
-  const blob = await shrink(file);
+export async function uploadImage(file, { url = '/api/upload', max = 2200 } = {}) {
+  const blob = await shrink(file, max);
   const data = await new Promise((resolve, reject) => {
     const r = new FileReader();
     r.onload = () => resolve(r.result);
     r.onerror = reject;
     r.readAsDataURL(blob);
   });
-  return request('/api/upload', { method: 'POST', body: JSON.stringify({ name: file.name, data }) });
+  return request(url, { method: 'POST', body: JSON.stringify({ name: file.name, data }) });
 }

@@ -1017,3 +1017,107 @@ body.modal-open { overflow: hidden; }
   .adm-form-grid { grid-template-columns: minmax(0, 1fr); }
   .lf-it .pill { display: none; }
 }
+
+/* ===================================================================
+   Saytda "Elan yerləşdir" + admin "Saytdan elanlar"
+   =================================================================== */
+.main-nav a.nav-post { color: var(--accent-deep); font-weight: 700; }
+.main-nav a.nav-post:hover { color: var(--ink); }
+.page-lead { margin-top: 12px; max-width: 640px; }
+.submit-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; align-items: start; }
+.submit-wrap [hidden] { display: none !important; }
+.submit-form { padding: 28px; border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 22px; }
+.submit-form .center { text-align: center; }
+.seg-lg span { display: flex; flex-direction: column; gap: 2px; padding: 14px 12px; }
+.seg-lg span b { font-size: 1rem; }
+.seg-lg span small { font-weight: 500; font-size: .8rem; color: var(--muted); }
+.sf-block { border: 0; padding: 0; margin: 0; min-width: 0; }
+.sf-block > legend { display: flex; align-items: center; gap: 10px; padding: 0; margin-bottom: 14px; font-family: var(--display); font-size: 1.3rem; font-weight: 600; letter-spacing: -.02em; }
+.sf-block > legend span { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--forest); color: var(--accent); font: 700 .9rem var(--sans); }
+.sf-note { margin: -6px 0 12px; }
+.sf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.sf-grid .full { grid-column: 1 / -1; }
+.sf-grid label, .sf-label { display: flex; flex-direction: column; gap: 6px; font-size: .86rem; font-weight: 700; color: #3d463f; }
+.sf-label { margin-bottom: 8px; }
+.sf-grid input, .sf-grid select, .sf-grid textarea { width: 100%; height: 44px; padding: 0 14px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--surface); outline: none; transition: border-color .2s, box-shadow .2s; }
+.sf-grid textarea { height: auto; padding: 12px 14px; resize: vertical; line-height: 1.5; }
+.sf-grid input:focus, .sf-grid select:focus, .sf-grid textarea:focus { border-color: var(--forest-2); box-shadow: 0 0 0 3px rgba(43, 78, 62, .15); }
+.sf-grid .chip input { width: auto; height: auto; }
+.sf-sub { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px; margin: 0; }
+.sf-sub legend { font-size: .86rem; font-weight: 700; padding: 0 6px; }
+.file-btn.loading { opacity: .6; pointer-events: none; }
+.submit-side { position: sticky; top: calc(var(--header-h) + 20px); display: flex; flex-direction: column; gap: 16px; }
+.submit-side .agent-card { display: flex; flex-direction: column; gap: 10px; }
+.submit-side h3 { font-size: 1.1rem; }
+.how { margin: 0; padding: 0; list-style: none; counter-reset: how; display: flex; flex-direction: column; gap: 12px; }
+.how li { counter-increment: how; display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start; font-size: .92rem; }
+.how li::before { content: counter(how); display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--surface-2); font-weight: 800; font-size: .8rem; }
+.sf-done { align-items: flex-start; gap: 14px; padding: 40px; }
+.sf-done-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+@media (max-width: 960px) {
+  .submit-wrap { grid-template-columns: minmax(0, 1fr); }
+  .submit-side { position: static; }
+}
+@media (max-width: 560px) {
+  .sf-grid { grid-template-columns: minmax(0, 1fr); }
+  .submit-form { padding: 20px; }
+}
+
+/* Admin: Saytdan elanlar */
+.type-switch { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+.type-switch button { display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; align-items: center; column-gap: 12px; padding: 16px 18px; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); text-align: left; transition: all .15s; }
+.type-switch button .ic { grid-row: span 2; width: 40px; height: 40px; padding: 10px; border-radius: 12px; background: var(--surface-2); color: var(--forest-2); }
+.type-switch button span { font-weight: 700; font-size: 1rem; }
+.type-switch button small { grid-column: 2; color: var(--muted); font-size: .82rem; }
+.type-switch button b { grid-row: span 2; grid-column: 3; padding: 4px 10px; border-radius: 999px; background: #3b82f6; color: #fff; font-size: .76rem; }
+.type-switch button:hover { border-color: var(--ink); }
+.type-switch button.on { border-color: var(--forest); box-shadow: 0 0 0 2px rgba(29, 54, 43, .15); }
+.type-switch button.on .ic { background: var(--forest); color: var(--accent); }
+.sub-list { display: flex; flex-direction: column; gap: 10px; }
+.sub-card { display: grid; grid-template-columns: 96px minmax(0, 1fr) 220px 24px; gap: 16px; align-items: center; padding: 12px 16px 12px 12px; border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); border: 1px solid transparent; transition: border-color .15s, transform .15s; }
+.sub-card:hover { border-color: var(--line); transform: translateY(-1px); }
+.sub-card.is-new { box-shadow: inset 3px 0 0 #3b82f6, var(--shadow); }
+.sub-media { width: 96px; height: 72px; border-radius: 12px; overflow: hidden; }
+.sub-media img { width: 100%; height: 100%; object-fit: cover; }
+.sub-ph { display: grid; place-items: center; width: 100%; height: 100%; background: #e2f3e7; color: var(--forest-2); }
+.sub-ph.seek { background: #e4edfb; color: #2563eb; }
+.sub-ph.big { width: 64px; height: 64px; border-radius: 18px; flex-shrink: 0; }
+.sub-main { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.sub-main > strong { font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sub-top { display: flex; align-items: center; gap: 10px; }
+.sub-facts { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .86rem; color: var(--muted); }
+.sub-facts b { color: var(--ink); }
+.sub-facts .ok { color: #1f7a4a; font-weight: 700; }
+.sub-contact { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.sub-contact div { display: flex; flex-direction: column; min-width: 0; }
+.sub-contact strong { font-size: .9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sub-go { color: var(--muted); }
+.sub-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+.sub-grid .col { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.sub-grid .col > .btn-danger { align-self: flex-start; }
+.sub-photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
+.sub-photos a { aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; }
+.sub-photos img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.sub-photos a:hover img { transform: scale(1.05); }
+.panel .who { display: flex; align-items: center; gap: 14px; }
+.panel .who > div { display: flex; flex-direction: column; gap: 2px; }
+.panel .who .big { font-size: 1.1rem; }
+.contact-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.client-tags select.status-select { height: 30px; }
+.from-sub { margin: -8px 0 20px; padding: 14px 18px; border-radius: 14px; background: #fff4d1; border: 1px solid #f2dc9a; display: flex; flex-direction: column; gap: 4px; font-size: .92rem; }
+.from-sub a { font-weight: 700; text-decoration: underline; }
+.sub-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.sub-stats a { display: flex; align-items: baseline; gap: 10px; padding: 12px 14px; border-radius: 14px; background: var(--surface-2); }
+.sub-stats a:hover { background: #e9e5da; }
+.sub-stats strong { font-family: var(--display); font-size: 1.7rem; letter-spacing: -.03em; }
+.sub-stats span { font-size: .84rem; color: var(--muted); }
+.sub-stats a.hot { background: #e4edfb; }
+.sub-stats a.hot strong { color: #2563eb; }
+@media (max-width: 1000px) {
+  .sub-card { grid-template-columns: 72px minmax(0, 1fr) 20px; }
+  .sub-media { width: 72px; height: 56px; }
+  .sub-contact { grid-column: 2; grid-row: 2; }
+  .sub-go { grid-row: span 2; grid-column: 3; grid-row-start: 1; }
+  .sub-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) { .type-switch, .sub-stats { grid-template-columns: minmax(0, 1fr); } }

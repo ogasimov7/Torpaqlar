@@ -7,13 +7,14 @@ import {
   leadForm, clientForm, taskForm, noteForm, updateCounts, fmtLongDate,
 } from './common.js';
 import { taskRow, bindTasks } from './clients.js';
+import { SUB_STATUS, matches } from './submissions.js';
 
 export default async function dashboard(root) {
   const load = async () => {
-    const [listings, leads, clients, tasks, notes] = await Promise.all([
-      getListings(true), crmList('leads', true), crmList('clients', true), crmList('tasks', true), crmList('notes', true),
+    const [listings, leads, clients, tasks, notes, subs] = await Promise.all([
+      getListings(true), crmList('leads', true), crmList('clients', true), crmList('tasks', true), crmList('notes', true), crmList('submissions', true),
     ]);
-    return { listings, leads, clients, tasks, notes };
+    return { listings, leads, clients, tasks, notes, subs };
   };
   let d = await load();
   const reload = async () => { d = await load(); draw(); updateCounts(); };
@@ -39,6 +40,9 @@ export default async function dashboard(root) {
 
     const funnel = Object.entries(LEAD_STATUS).map(([k, v]) => [v, d.leads.filter((l) => l.status === k).length]);
     const total = d.listings.length || 1;
+    const pendingSell = d.subs.filter((x) => x.type === 'sell' && ['new', 'reviewing'].includes(x.status));
+    const activeSeek = d.subs.filter((x) => x.type === 'seek' && ['new', 'contacted', 'offered'].includes(x.status));
+    const latestSubs = [...pendingSell, ...activeSeek].sort((a, b) => b.createdAt.localeCompare(a.createdAt)).slice(0, 5);
     const h = new Date().getHours();
     const hello = h < 12 ? 'Sabahınız xeyir' : h < 18 ? 'Günortanız xeyir' : 'Axşamınız xeyir';
 
@@ -82,6 +86,26 @@ export default async function dashboard(root) {
           <div class="task-list" id="dTasks">${upcoming.map((t) => taskRow(t, L, C)).join('') || '<p class="muted small">Planlaşdırılmış tapşırıq yoxdur.</p>'}</div>
         </div>
 
+        <div class="panel span2">
+          <div class="panel-h"><h3>Saytdan elanlar</h3><a class="link-arrow small" href="#/admin/sorgular">Hamısı →</a></div>
+          <div class="sub-stats">
+            <a href="#/admin/sorgular" class="${pendingSell.length ? 'hot' : ''}" data-st="sell"><strong>${pendingSell.length}</strong><span>satış elanı təsdiq gözləyir</span></a>
+            <a href="#/admin/sorgular" data-st="seek"><strong>${activeSeek.length}</strong><span>aktiv axtarış sorğusu</span></a>
+          </div>
+          <div class="lead-feed">${latestSubs.map((x) => {
+            const st = SUB_STATUS[x.type][x.status];
+            const m = x.type === 'seek' ? matches(x, d.listings).length : 0;
+            return `<div class="lf-it ${x.status === 'new' ? 'is-new' : ''}">
+              ${avatar(x.name)}
+              <a class="grow" href="#/admin/sorgular/${x.id}">
+                <strong>${esc(x.name)}</strong> <span class="muted small">· ${x.type === 'sell' ? 'satır' : 'axtarır'} · ${ago(x.createdAt)}</span>
+                <div class="muted small">${x.type === 'sell' ? `${esc(x.region)} · ${x.area} sot · ${fmtPrice(+x.price)}` : `${esc(x.region || '')}${x.budgetMax ? ` · ${fmtPrice(+x.budgetMax)}-a qədər` : ''} · ${m} uyğun elan`}</div>
+              </a>
+              <span class="pill" style="--c:${st.color}"><i></i>${st.label}</span>
+            </div>`;
+          }).join('') || '<p class="muted small">Gözləyən sorğu yoxdur.</p>'}</div>
+        </div>
+
         <div class="panel">
           <div class="panel-h"><h3>Müraciət mərhələləri</h3></div>
           <div class="funnel">${funnel.map(([v, n]) => `
@@ -95,7 +119,7 @@ export default async function dashboard(root) {
           <div class="stack-legend">${Object.entries(STATUS).map(([k, v]) => { const n = d.listings.filter((l) => l.status === k).length; return `<div><i style="background:${v.color}"></i>${v.label}<b>${n}</b><span class="muted small">${Math.round((n / total) * 100)}%</span></div>`; }).join('')}</div>
         </div>
 
-        <div class="panel">
+        <div class="panel span2">
           <div class="panel-h"><h3>Ən çox sorğu alan elanlar</h3></div>
           <div class="top-list">${top.map(([id, n]) => `
             <a href="#/admin/muracietler/elan-${id}" class="top-it">
@@ -109,6 +133,7 @@ export default async function dashboard(root) {
     </section>`;
 
     bindTasks($('#dTasks'), d, reload);
+    root.querySelectorAll('[data-st]').forEach((a) => a.addEventListener('click', () => sessionStorage.setItem('subType', a.dataset.st)));
     root.querySelectorAll('[data-q]').forEach((b) => b.addEventListener('click', () => {
       const f = { lead: leadForm, client: clientForm, task: taskForm, note: noteForm }[b.dataset.q];
       f(null, d, reload);
