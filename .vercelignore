@@ -1,1 +1,6 @@
 scripts/
+# Lokal CRM məlumatları CLI deploy-a düşməsin (Vercel-də Blob istifadə olunur)
+data/leads.json
+data/clients.json
+data/tasks.json
+data/notes.json
