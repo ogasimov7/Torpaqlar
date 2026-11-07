@@ -57,7 +57,8 @@ Lokalda heç bir paket quraşdırmaq lazım deyil (Node.js 18+ kifayətdir).
 - `api/index.js` — bütün `/api/*` sorğularını işləyən funksiya; məntiq `lib/core.js`-dədir (lokal `server.js` də onu işlədir).
 - Elanlar və yüklənən fotolar **Vercel Blob**-da saxlanılır (`BLOB_READ_WRITE_TOKEN`). Blob boşdursa, `data/listings.json`-dakı elanlar göstərilir; ilk dəyişiklikdən sonra hamısı Blob-a yazılır.
 - Admin açarı **`ADMIN_KEY`** mühit dəyişəni ilə verilir (Vercel → Project → Settings → Environment Variables). Verilməyibsə admin bağlıdır. Dəyişdikdən sonra yenidən deploy edin.
-- `main` budağına push → avtomatik deploy.
+- Deploy: `vercel deploy --prod` (GitHub-a push avtomatik deploy etmir). Canlı ünvan: https://torpaqlar.vercel.app
+- Admin: https://torpaqlar.vercel.app/admin (bölmələr: `/admin/musteriler`, `/admin/muracietler` və s.)
 
 ## Fayllar
 
